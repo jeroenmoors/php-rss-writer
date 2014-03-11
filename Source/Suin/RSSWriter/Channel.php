@@ -131,12 +131,24 @@ class Channel implements \Suin\RSSWriter\ChannelInterface
 	}
 
 	/**
+	 * Add image object
+	 * @param \Suin\RSSWriter\ImageInterface $image
+	 * @return $this
+	 */
+	public function addImage(ImageInterface $image) {
+        $this->items[] = $image;
+		return $this;
+    }
+
+	/**
 	 * Append to feed
 	 * @param \Suin\RSSWriter\FeedInterface $feed
 	 * @return $this
 	 */
 	public function appendTo(FeedInterface $feed)
 	{
+        //print get_class($this)."\n";
+        
 		$feed->addChannel($this);
 		return $this;
 	}

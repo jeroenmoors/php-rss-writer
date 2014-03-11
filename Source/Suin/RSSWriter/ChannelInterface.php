@@ -77,6 +77,13 @@ interface ChannelInterface
 	public function addItem(ItemInterface $item);
 
 	/**
+	 * Add image object
+	 * @param \Suin\RSSWriter\ImageInterface $image
+	 * @return $this
+	 */
+	public function addImage(ImageInterface $image);
+
+	/**
 	 * Append to feed
 	 * @param \Suin\RSSWriter\FeedInterface $feed
 	 * @return $this
